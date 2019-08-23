@@ -14,7 +14,8 @@ class App extends React.Component {
     this.setState({
       data
     }, () => {
-      console.log('this is data from API call', this.state.data)
+      console.log('this is data from API call')
+      console.table(this.state.data)
     })
   }
 

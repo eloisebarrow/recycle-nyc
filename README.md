@@ -1,68 +1,109 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
 
-## Available Scripts
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+The Recycle-NYC app leverages NYC Open Data's Public Recycling Bin API to display public recycling bin options by borough. This app also uses the geolocation API to display the 5 closest recycling bins to a given user.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Wireframes
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Below are images of the proposed React architecture and wireframes.
 
-### `npm test`
+React architecture:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://res.cloudinary.com/eloise/image/upload/v1566593076/sei_project_2/project_2_architecture.jpg
 
-### `npm run build`
+Wireframe:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://res.cloudinary.com/eloise/image/upload/v1566593076/sei_project_2/project_2_wireframe.heic
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## API Description
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The 'Public Recycling Bins' API is a dataset that offers latitude/longitude coordinates for public recycling bins throughout the five boroughs. The data is fairly straightforward: in addition to lat/long coordinates, it provides the borough name, address, park site name and site type.
 
-### `npm run eject`
+Here is a sample of what the data looks like when returned: ![img]https://res.cloudinary.com/eloise/image/upload/v1566523488/recycle-nyc-dataset.png
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## API Documentation from Socrata / NYC Open Data
+https://dev.socrata.com/consumers/getting-started.html<br/>
+https://data.cityofnewyork.us/Environment/Public-Recycling-Bins/sxx4-xhzg<br/>
+https://dev.socrata.com/foundry/data.cityofnewyork.us/sxx4-xhzg
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## MVP (Minimum Viable Product)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Pull data from NYC's Open Data API 'Public Recycling Bins'<br/>
+- Build a function that will pull 5 closest recycling bins based on gelocation and display the results on the same page<br/>
+- Build a second function that will pull recycling bins by borough when a borough is selected from dropdown menu
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## PostMVP
 
-## Learn More
+- Pull user's location using the geolocator API<br/>
+- Include a map to visualize the locations of the recycling bins
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## React Component Hierarchy
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Define the the React components and the architectural design of your app.
 
-### Code Splitting
+My app starts in the App component, with children components of Header, Main and Footer.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+The Header will have the app's title as well as a navigation subheader, which will have links to the following child components: 'home', 'about', 'near you', 'by borough' and 'resources'. 'Home' will redirect the user to the Main component, 'about' will link to a simple page with a brief statement about the app, itself, and 'resources' will have a few links to learn more about recycling in NYC. 'Near you' and 'by borough' will render data by geolocation or borough, respectively.
 
-### Analyzing the Bundle Size
+The Main component will render an invite to search for public recycling bins.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+All data results will display the park_site_name and address.
 
-### Making a Progressive Web App
+The footer component will contain a simple copyright logo and a link to go to the top of the page.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Components
+##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-### Advanced Configuration
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+| Component | Description |
+| --- | :---: |  
+| App | This will contain the primary components (Header, Main and Footer) & include Routes |
+| Header | This will render the header including the nav |
+| Main | Renders the prompt and nav tabs when clicked ('near you', 'by borough' and Resources) |
+| NearYou | Renders clickable 'near you' & corresponding data |
+| ByBorough | Renders title, borough dropdown menu and borough data |
+| Resources | Displays names of organizations and links to more info on recycling & sustainability |
+| About | Renders small blurb on App |
+| Footer | Renders footer |
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Time-Priority Matrix
 
-### `npm run build` fails to minify
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Establish each component | H | 20mins| TBA | TBA |
+| Put router in place | H | 2hrs | TBA | TBA |
+| Pull data into each Filter component ('near you' and 'by borough') | H | 2hrs | TBA | TBA |
+| Pseudocode logic for retrieving data from 'by borough' | H | 2hrs | TBA | TBA |
+| Code logic for retrieving 'by borough' data | H | 2hrs | TBA | TBA |
+| Render data for 'by borough' | H | 2hrs | TBA | TBA |
+| Research geolocation API data | H | 1hr | TBA | TBA |
+| Pull data into 'near you' using geolocation API | H | 2hrs | TBA | TBA |
+| Pseudocode logic for retrieving data from 'near you' | H | 2hrs | TBA | TBA |
+| Render data for 'near you' | H | 2hrs | TBA | TBA |
+| Style header | H | 1hr | TBA | TBA |
+| Style main | M | 2hrs | TBA | TBA |
+| Style footer | M | 30mins | TBA | TBA |
+| Total |  | |  |  |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Additional Libraries
+ From the start of the project, I am planning to use axios and react router dom. Axios will allow me to efficiently call the API and react router dom will allow my site to be efficient in its content delivery. Also react-map-gl for geolocation.
+
+## Code Snippet
+
+Here I'll include a brief code snippet (not longer than 10 lines) and description of functionality that I'm proud of.
+
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
+
+## Issues and Resolutions
+ Here I'll list all major issues encountered and their resolution.
+
+**ERROR**: (sample) app.js:34 Uncaught SyntaxError: Unexpected identifier                                
+**RESOLUTION**: (sample) Missing comma after first object in sources {} object
