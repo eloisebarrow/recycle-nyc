@@ -67,8 +67,8 @@ The footer component will contain a simple copyright logo and a link to go to th
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Establish each component | H | 30mins| TBA | TBA |
-| Put router in place | H | 2hrs | TBA | TBA |
+| Establish each component | H | 30mins| 30mins | TBA |
+| Put router in place | H | 2hrs | 30mins | TBA |
 | Pull data into each Filter component ('near you' and 'by borough') | H | 2hrs | TBA | TBA |
 | Pseudocode logic for retrieving data from 'by borough' | H | 2hrs | TBA | TBA |
 | Code logic for retrieving 'by borough' data | H | 2hrs | TBA | TBA |

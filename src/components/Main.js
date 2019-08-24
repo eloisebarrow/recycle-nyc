@@ -1,9 +1,15 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 const Main = () => {
   return (
-    <h1>This will be Main</h1>
+    <Switch>
+      <Route path="/about"></Route>
+      <Route path="/resources"></Route>
+      <Route path="/by-borough"></Route>
+      <Route path="/near-you"></Route>
+      <Route path="/"></Route>
+    </Switch>
   )
 }
 
