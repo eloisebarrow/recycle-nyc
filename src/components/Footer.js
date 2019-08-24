@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
-import Main from './Main'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const footerStyles = {
@@ -22,7 +21,7 @@ const Footer = () => {
   return (
     <footer style={footerStyles}>
       <Link style={linkStyles} to="/">to top</Link>
-      
+
     </footer>
   )
 }

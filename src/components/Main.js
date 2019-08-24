@@ -24,7 +24,6 @@ class Main extends React.Component {
   }
 
   render() {
-    // console.log('this is state from Main', this.state.data)
     return (
       <Switch>
         <Route path="/about" render={() => <About />}></Route>

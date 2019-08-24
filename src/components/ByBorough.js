@@ -20,11 +20,10 @@ class ByBorough extends React.Component {
       Borough: {d.borough} Park Name: {d.park_site_name} Address: {d.address}
       </li>
     )
-    this.setState({ allBins: this.allBins })
   })
 
-  const bronx = this.props.apiData.filter( (d, i) => {
-    if (d && d.borough == 'bronx') {
+  const bronx = this.props.apiData.forEach( (d, i) => {
+    if (this.props.apiData && d.borough === 'Bronx') {
       return(
         <li key={i}>
         Park Name: {d.park_site_name} Address: {d.address}
@@ -33,7 +32,7 @@ class ByBorough extends React.Component {
     }
   })
 
-  // console.table('tests from ByBorough', this.props.apiData[225] && this.props.apiData[225].borough)
+  // console.table('tests from ByBorough', this.props.apiData[0] && this.props.apiData[0].borough)
     return (
       <div>
       <h2>Select your borough:</h2>

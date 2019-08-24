@@ -71,9 +71,9 @@ The footer component will contain a simple copyright logo and a link to go to th
 | Put router in place | H | 2hrs | 40mins | TBA |
 | Pull data into each Filter component ('near you' and 'by borough') | H | 2hrs | 30mins | TBA |
 | Pseudocode logic for retrieving data from 'by borough' | H | 2hrs | TBA | TBA |
-| Code logic for retrieving 'by borough' data & render it | H | 4hrs | 2hrs | TBA |
-| Research geolocation API data | H | 1hr | TBA | TBA |
-| Pull data into 'near you' using geolocation API | H | 2hrs | TBA | TBA |
+| Code logic for retrieving 'by borough' data & render it | H | 4hrs | 2hrs 10mins | TBA |
+| Research geolocation API data | H | 1hr | 10mins | TBA |
+| Pull data into 'near you' using geolocation API | H | 2hrs | 5mins | TBA |
 | Pseudocode logic for retrieving data from 'near you' | H | 2hrs | TBA | TBA |
 | Render data for 'near you' | H | 2hrs | TBA | TBA |
 | Style header | H | 1hr | 10mins | TBA |
