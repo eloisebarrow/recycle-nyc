@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Main from './components/Main'
 
 class App extends React.Component {
   state = {
@@ -14,7 +17,7 @@ class App extends React.Component {
     this.setState({
       data
     }, () => {
-      console.log('this is data from API call')
+      // console.log('this is data from API call')
       console.table(this.state.data)
     })
   }
@@ -26,8 +29,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Recycle NYC</h1>
-        <h3>Waste Not, Want Not: Find a public recycling bin near you!</h3>
+        <Header />
+        <Main />
+        <Footer />
       </div>
     );
   }

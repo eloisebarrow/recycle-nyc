@@ -80,7 +80,7 @@ The footer component will contain a simple copyright logo and a link to go to th
 | Style header | H | 1hr | TBA | TBA |
 | Style main | M | 2hrs | TBA | TBA |
 | Style footer | M | 30mins | TBA | TBA |
-| Total | 21hrs | |  |  |
+| Total |  | 21hrs |  |  |
 
 ## Additional Libraries
  From the start of the project, I am planning to use axios and react router dom. Axios will allow me to efficiently call the API and react router dom will allow my site to be efficient in its content delivery. Also react-map-gl for geolocation.
