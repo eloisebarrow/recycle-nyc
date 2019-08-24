@@ -21,7 +21,7 @@ https://res.cloudinary.com/eloise/image/upload/v1566593076/sei_project_2/project
 
 The 'Public Recycling Bins' API is a dataset that offers latitude/longitude coordinates for public recycling bins throughout the five boroughs. The data is fairly straightforward: in addition to lat/long coordinates, it provides the borough name, address, park site name and site type.
 
-Here is a sample of what the data looks like when returned: ![img]https://res.cloudinary.com/eloise/image/upload/v1566523488/recycle-nyc-dataset.png
+Here is a sample of what the data looks like when returned: https://res.cloudinary.com/eloise/image/upload/v1566523488/recycle-nyc-dataset.png
 
 ## API Documentation from Socrata / NYC Open Data
 https://dev.socrata.com/consumers/getting-started.html<br/>
@@ -30,33 +30,26 @@ https://dev.socrata.com/foundry/data.cityofnewyork.us/sxx4-xhzg
 
 ## MVP (Minimum Viable Product)
 
-- Pull data from NYC's Open Data API 'Public Recycling Bins'<br/>
-- Build a function that will pull 5 closest recycling bins based on gelocation and display the results on the same page<br/>
+- Pull data from NYC's Open Data API 'Public Recycling Bins'
+- Build a function that will pull 5 closest recycling bins based on gelocation and display the results on the same page
 - Build a second function that will pull recycling bins by borough when a borough is selected from dropdown menu
 
 ## PostMVP
 
-- Pull user's location using the geolocator API<br/>
 - Include a map to visualize the locations of the recycling bins
 
 ## React Component Hierarchy
 
-Define the the React components and the architectural design of your app.
-
 My app starts in the App component, with children components of Header, Main and Footer.
 
-The Header will have the app's title as well as a navigation subheader, which will have links to the following child components: 'home', 'about', 'near you', 'by borough' and 'resources'. 'Home' will redirect the user to the Main component, 'about' will link to a simple page with a brief statement about the app, itself, and 'resources' will have a few links to learn more about recycling in NYC. 'Near you' and 'by borough' will render data by geolocation or borough, respectively.
+The Header will have the app's title as well as a navigation subheader, which will have links to the following child components: 'home', 'about', 'near you', 'by borough' and 'resources'. 'Home' will redirect the user to the Main component, 'about' will link to a simple page with a brief statement about the app, itself, and 'resources' will have a few links to learn more about recycling in NYC. 'Near you' and 'by borough' will render data by geolocation or borough, respectively. All data results will display the park_site_name and address.
+
 
 The Main component will render an invite to search for public recycling bins.
-
-All data results will display the park_site_name and address.
 
 The footer component will contain a simple copyright logo and a link to go to the top of the page.
 
 ## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
 | Component | Description |
 | --- | :---: |  
@@ -74,7 +67,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Establish each component | H | 20mins| TBA | TBA |
+| Establish each component | H | 30mins| TBA | TBA |
 | Put router in place | H | 2hrs | TBA | TBA |
 | Pull data into each Filter component ('near you' and 'by borough') | H | 2hrs | TBA | TBA |
 | Pseudocode logic for retrieving data from 'by borough' | H | 2hrs | TBA | TBA |
@@ -87,7 +80,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Style header | H | 1hr | TBA | TBA |
 | Style main | M | 2hrs | TBA | TBA |
 | Style footer | M | 30mins | TBA | TBA |
-| Total |  | |  |  |
+| Total | 21hrs | |  |  |
 
 ## Additional Libraries
  From the start of the project, I am planning to use axios and react router dom. Axios will allow me to efficiently call the API and react router dom will allow my site to be efficient in its content delivery. Also react-map-gl for geolocation.
