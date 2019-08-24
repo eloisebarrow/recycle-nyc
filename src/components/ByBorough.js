@@ -4,34 +4,36 @@ class ByBorough extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      borough: this.props.apiData.borough,
-      parkName: this.props.apiData.park_site_name,
-      address: this.props.apiData.address,
+
     }
   }
 
-
-
   render() {
-  // console.log('this is state from ByBorough', this.props.apiData)
   const dropdownStyles = {
     margin: '1% 0',
     fontSize: '0.9rem',
   }
 
   const allBins = this.props.apiData.map( (d, i) => {
-    return (
+    return(
       <li key={i}>
       Borough: {d.borough} Park Name: {d.park_site_name} Address: {d.address}
       </li>
     )
+    this.setState({ allBins: this.allBins })
   })
 
   const bronx = this.props.apiData.filter( (d, i) => {
-    return d.borough === 'bronx';
-    console.log('this is bronx')
+    if (d && d.borough == 'bronx') {
+      return(
+        <li key={i}>
+        Park Name: {d.park_site_name} Address: {d.address}
+        </li>
+      )
+    }
   })
 
+  // console.table('tests from ByBorough', this.props.apiData[225] && this.props.apiData[225].borough)
     return (
       <div>
       <h2>Select your borough:</h2>
@@ -43,12 +45,10 @@ class ByBorough extends React.Component {
         <option value="staten-island">Staten Island</option>
       </select>
 
-      {bronx}
+      {allBins}
       </div>
     )
   }
-
-
 }
 
 export default ByBorough

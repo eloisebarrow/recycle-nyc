@@ -68,11 +68,10 @@ The footer component will contain a simple copyright logo and a link to go to th
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Establish each component | H | 30mins| 30mins | TBA |
-| Put router in place | H | 2hrs | 30mins | TBA |
-| Pull data into each Filter component ('near you' and 'by borough') | H | 2hrs | TBA | TBA |
+| Put router in place | H | 2hrs | 40mins | TBA |
+| Pull data into each Filter component ('near you' and 'by borough') | H | 2hrs | 30mins | TBA |
 | Pseudocode logic for retrieving data from 'by borough' | H | 2hrs | TBA | TBA |
-| Code logic for retrieving 'by borough' data | H | 2hrs | TBA | TBA |
-| Render data for 'by borough' | H | 2hrs | TBA | TBA |
+| Code logic for retrieving 'by borough' data & render it | H | 4hrs | 2hrs | TBA |
 | Research geolocation API data | H | 1hr | TBA | TBA |
 | Pull data into 'near you' using geolocation API | H | 2hrs | TBA | TBA |
 | Pseudocode logic for retrieving data from 'near you' | H | 2hrs | TBA | TBA |
@@ -100,3 +99,8 @@ function reverse(string) {
 
 **ERROR**: (sample) app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: (sample) Missing comma after first object in sources {} object
+
+## Questions
+
+**QUESTION**:                               
+**ANSWER**:

@@ -21,6 +21,10 @@ const Header = () => {
     fontSize: '1.4rem',
   }
 
+  const h3Styles = {
+    fontStyle: 'italic',
+  }
+
   return (
     <header style={headerStyles}>
       <h1>Recycle NYC</h1>
@@ -31,7 +35,7 @@ const Header = () => {
         <li><Link style={linkStyles} to="/by-borough">by borough</Link></li>
         <li><Link style={linkStyles} to="/near-you">near you</Link></li>
       </ul>
-      <h3>Waste Not, Want Not: Find a public recycling bin near you!</h3>
+      <h3 style={h3Styles}>Waste Not, Want Not: Find a public recycling bin near you!</h3>
     </header>
   )
 }
