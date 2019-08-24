@@ -77,9 +77,9 @@ The footer component will contain a simple copyright logo and a link to go to th
 | Pull data into 'near you' using geolocation API | H | 2hrs | TBA | TBA |
 | Pseudocode logic for retrieving data from 'near you' | H | 2hrs | TBA | TBA |
 | Render data for 'near you' | H | 2hrs | TBA | TBA |
-| Style header | H | 1hr | TBA | TBA |
+| Style header | H | 1hr | 10mins | TBA |
 | Style main | M | 2hrs | TBA | TBA |
-| Style footer | M | 30mins | TBA | TBA |
+| Style footer | M | 30mins | 15mins | TBA |
 | Total |  | 21hrs |  |  |
 
 ## Additional Libraries

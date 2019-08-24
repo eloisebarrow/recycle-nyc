@@ -16,9 +16,6 @@ class App extends React.Component {
 
     this.setState({
       data
-    }, () => {
-      // console.log('this is data from API call')
-      console.table(this.state.data)
     })
   }
 
@@ -30,7 +27,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Main />
+        <Main apiData={this.state.data} />
         <Footer />
       </div>
     );
