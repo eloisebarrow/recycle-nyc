@@ -104,6 +104,9 @@ function reverse(string) {
 **ERROR**: I can't return individual borough data in the ByBorough component - tried looping through using .filter and .forEach, neither updated the DOM. Also tried looping through all data in Main's async function and distributing borough data to state but that only returned 1 object each time instead of all borough data.
 **RESOLUTION**: My code in .forEach was correct but despite including a return statement forEach will not return any data.
 
+**ERROR**: I can't get my mapbox to render in the NearYou component.
+**RESOLUTION**: My MapboxAccessToken environment variable in my .env file needed REACT_APP_ in front of it & I had to restart my react server.
+
 ## Questions
 
 **QUESTION**:                               

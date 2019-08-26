@@ -8,14 +8,6 @@ const ByBorough = (props) => {
     fontSize: '0.9rem',
   }
 
-  const allBins = props.apiData.map( (d, i) => {
-    return(
-      <li key={i}>
-      BOROUGH: {d.borough} PARK NAME: {d.park_site_name} ADDRESS: {d.address}
-      </li>
-    )
-  })
-
   const boroughData = props.apiData
     .filter((d) => d.borough === borough)
     .map((d, i) => {
@@ -27,7 +19,7 @@ const ByBorough = (props) => {
   })
   return (
     <div>
-    <h2>Select your borough:</h2>
+    <h2>View recycling bins by borough</h2>
     <select style={dropdownStyles} onChange={(e) => setBorough(e.target.value)} name="boroughs" id="boroughs">
       <option value="null">Choose Your Borough</option>
       <option value="Bronx">Bronx</option>
