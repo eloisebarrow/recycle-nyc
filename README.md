@@ -79,7 +79,7 @@ The footer component will contain a simple copyright logo and a link to go to th
 | Research geolocation API data | H | 1hr | 1hr | TBA |
 | Pull data into 'near you' using geolocation API | H | 2hrs | 35mins | TBA |
 | Pseudocode logic for retrieving data from 'near you' | H | 2hrs | TBA | TBA |
-| Render data for 'near you' | H | 2hrs | TBA | TBA |
+| Render data for 'near you' | H | 2hrs | 2hrs | TBA |
 | Style header | H | 1hr | 10mins | TBA |
 | Style main | M | 2hrs | TBA | TBA |
 | Style footer | M | 30mins | 15mins | TBA |
@@ -116,3 +116,15 @@ function reverse(string) {
 **ERROR**: Map would not render when passing it user info via userLat and userLong in state.
 
 **RESOLUTION**: I had to update the viewport lat/long directly and conditionally render the map so it would only render once it received lat/long coordinates (due to the geolocator taking longer to return data than the map initially took to render).
+
+-
+
+**ERROR**: Map marker would not render on mapbox.
+
+**RESOLUTION**: It was physically there but had no styles so I added those.
+
+-
+
+**ERROR**: When mapping through API data and trying to generate a marker for each data point, the markers are only generated with hard-coded data, I cannot generate them with my element parameter and get the following error: viewport-mercator-project: assertion failed
+
+**RESOLUTION**: pending

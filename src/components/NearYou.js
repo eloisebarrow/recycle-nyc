@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactMapGL from 'react-map-gl'
+import ReactMapGL, { Marker } from 'react-map-gl'
 require('dotenv').config()
 
 class NearYou extends React.Component {
@@ -12,8 +12,9 @@ class NearYou extends React.Component {
         height: 400,
         latitude: null,
         longitude: null,
-        zoom: 13
+        zoom: 8
       },
+      bins: [],
     }
   }
 
@@ -46,10 +47,21 @@ class NearYou extends React.Component {
       <div style={mapStyles}>
         <h2>Public recycling bins near you:</h2>
         {this.state.viewport.latitude && <ReactMapGL
+
           {...this.state.viewport}
           mapboxAccessToken={process.env.MapboxAccessToken}
           onViewportChange={this.setViewport}
-        /> }
+           >
+           {this.props.apiData.map( (d,i) => {
+             return(
+               <Marker key={i}
+               latitude={40.517368}
+               longitude={-74.190913}
+               >
+               </Marker>
+             )
+             }) }
+        </ReactMapGL> }
       </div>
     )
   }
