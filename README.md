@@ -1,5 +1,8 @@
 # Project Overview
 
+## Project Links
+Github repo: https://github.com/eloisebarrow/recycle-nyc
+Deployment: TBD
 
 ## Project Description
 
@@ -67,11 +70,12 @@ The footer component will contain a simple copyright logo and a link to go to th
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
+| Design site, architecture & wireframe | H | 4hrs| 6hrs | 6hrs |
 | Establish each component | H | 30mins| 30mins | TBA |
 | Put router in place | H | 2hrs | 40mins | TBA |
 | Pull data into each Filter component ('near you' and 'by borough') | H | 2hrs | 30mins | TBA |
 | Pseudocode logic for retrieving data from 'by borough' | H | 2hrs | TBA | TBA |
-| Code logic for retrieving 'by borough' data & render it | H | 4hrs | 3hrs 10mins | TBA |
+| Code logic for retrieving 'by borough' data & render it | H | 4hrs | 3hrs 40mins | TBA |
 | Research geolocation API data | H | 1hr | 10mins | TBA |
 | Pull data into 'near you' using geolocation API | H | 2hrs | 5mins | TBA |
 | Pseudocode logic for retrieving data from 'near you' | H | 2hrs | TBA | TBA |
@@ -79,7 +83,7 @@ The footer component will contain a simple copyright logo and a link to go to th
 | Style header | H | 1hr | 10mins | TBA |
 | Style main | M | 2hrs | TBA | TBA |
 | Style footer | M | 30mins | 15mins | TBA |
-| Total |  | 21hrs |  |  |
+| Total |  | 25hrs |  |  |
 
 ## Additional Libraries
  From the start of the project, I am planning to use axios and react router dom. Axios will allow me to efficiently call the API and react router dom will allow my site to be efficient in its content delivery. Also react-map-gl for geolocation.
@@ -97,8 +101,8 @@ function reverse(string) {
 ## Issues and Resolutions
  Here I'll list all major issues encountered and their resolution.
 
-**ERROR**: (sample) app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: (sample) Missing comma after first object in sources {} object
+**ERROR**: I can't return individual borough data in the ByBorough component - tried looping through using .filter and .forEach, neither updated the DOM. Also tried looping through all data in Main's async function and distributing borough data to state but that only returned 1 object each time instead of all borough data.
+**RESOLUTION**: My code in .forEach was correct but despite including a return statement forEach will not return any data.
 
 ## Questions
 
