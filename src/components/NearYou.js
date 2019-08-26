@@ -10,12 +10,10 @@ class NearYou extends React.Component {
       viewport: {
         width: 400,
         height: 400,
-        latitude: 37.7577,
-        longitude: -122.4376,
-        zoom: 10
+        latitude: null,
+        longitude: null,
+        zoom: 13
       },
-      userLat: null,
-      userLong: null,
     }
   }
 
@@ -23,12 +21,19 @@ class NearYou extends React.Component {
     this.setState({ viewport })
   }
 
-  getUserLocation = navigator.geolocation.getCurrentPosition( (position) => {
-    this.setState({
-      userLat: position.coords.latitude,
-      userLong: position.coords.longitude,
-    })
-  });
+  componentDidMount() {
+    if (this.state.viewport.latitude === null) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.setState(prevState => ({
+          viewport: {
+            ...prevState.viewport,
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          }
+        }))
+      });
+    }
+  }
 
   render() {
     const mapStyles = {
@@ -37,16 +42,14 @@ class NearYou extends React.Component {
       'alignItems': 'center',
     }
 
-    console.log('this is user lat:', this.state.userLat, 'this is userLong:', this.state.userLong)
-
     return (
       <div style={mapStyles}>
         <h2>Public recycling bins near you:</h2>
-        <ReactMapGL
-          mapboxAccessToken={process.env.MapboxAccessToken}
+        {this.state.viewport.latitude && <ReactMapGL
           {...this.state.viewport}
+          mapboxAccessToken={process.env.MapboxAccessToken}
           onViewportChange={this.setViewport}
-        />
+        /> }
       </div>
     )
   }

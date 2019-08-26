@@ -102,12 +102,17 @@ function reverse(string) {
  Here I'll list all major issues encountered and their resolution.
 
 **ERROR**: I can't return individual borough data in the ByBorough component - tried looping through using .filter and .forEach, neither updated the DOM. Also tried looping through all data in Main's async function and distributing borough data to state but that only returned 1 object each time instead of all borough data.
-**RESOLUTION**: My code in .forEach was correct but despite including a return statement forEach will not return any data.
+
+**RESOLUTION**: My code in .forEach was correct but despite including a return statement forEach will not return any data. I changed it to a .filter method to filter by borough and then mapped through the .filter to return a list of all bins in a given borough.
+
+-
 
 **ERROR**: I can't get my mapbox to render in the NearYou component.
+
 **RESOLUTION**: My MapboxAccessToken environment variable in my .env file needed REACT_APP_ in front of it & I had to restart my react server.
 
-## Questions
+-
 
-**QUESTION**:                               
-**ANSWER**:
+**ERROR**: Map would not render when passing it user info via userLat and userLong in state.
+
+**RESOLUTION**: I had to update the viewport lat/long directly and conditionally render the map so it would only render once it received lat/long coordinates (due to the geolocator taking longer to return data than the map initially took to render).
