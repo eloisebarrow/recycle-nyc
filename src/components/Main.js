@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css';
 import { Route, Switch } from 'react-router-dom'
 import axios from 'axios'
 import About from './About'
@@ -24,11 +25,8 @@ class Main extends React.Component {
   }
 
   render() {
-    const mainStyles = {
-      flex: '1',
-    }
     return (
-      <div style={mainStyles}>
+      <div className="main-div-styles">
         <Switch>
           <Route path="/about" render={() => <About />}></Route>
           <Route path="/resources" render={() => <Resources />}></Route>

@@ -1,32 +1,8 @@
 import React from 'react'
+import '../App.css'
 
 const ByBorough = (props) => {
   const [borough, setBorough] = React.useState(null);
-
-  const dropdownStyles = {
-    margin: '1% 0',
-    fontSize: '0.9rem',
-  }
-
-  const divStyles = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  }
-
-  const boroughDataStyles = {
-    margin: '2%',
-    width: '20%',
-    border: '1px solid black',
-  }
-
-  const pStyles = {
-    padding: '0 6%',
-  }
-
-  const categoryStyles = {
-    fontWeight: 'bold',
-  }
 
   const boroughData = props.apiData
     .filter((d) => d.borough === borough)
@@ -34,16 +10,15 @@ const ByBorough = (props) => {
       return (
         <div
         key={i}
-        style={boroughDataStyles}
-        className="borough-boxes" >
-          <p style={pStyles}>{d.borough} <br/><span style={categoryStyles}>Location:</span> {d.park_site_name} <br/><span style={categoryStyles}>Address:</span> {d.address}</p>
+        className="borough-data-styles" >
+          <p className="borough-content">{d.borough} <br/><span className="borough-category">Location:</span> {d.park_site_name} <br/><span className="borough-category">Address:</span> {d.address}</p>
         </div>
       )
   })
   return (
     <div>
       <h2>View recycling bins by borough</h2>
-      <select style={dropdownStyles} onChange={(e) => setBorough(e.target.value)} name="boroughs" id="boroughs">
+      <select className="borough-dropdown" onChange={(e) => setBorough(e.target.value)} name="boroughs" id="boroughs">
         <option value="null">Choose Your Borough</option>
         <option value="Bronx">Bronx</option>
         <option value="Brooklyn">Brooklyn</option>
@@ -52,7 +27,7 @@ const ByBorough = (props) => {
         <option value="Staten Island">Staten Island</option>
       </select>
 
-      <div style={divStyles}>
+      <div className="boroughs-main">
         {boroughData}
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css'
 import ReactMapGL, { Marker, GeolocateControl } from 'react-map-gl'
 require('dotenv').config()
 
@@ -30,21 +31,10 @@ class NearYou extends React.Component {
   }
 
   render() {
-    const mapStyles = {
-      'display': 'flex',
-      'flexDirection': 'column',
-      'alignItems': 'center',
-    }
-
-    const geoStyles = {
-      position: 'absolute',
-      margin: '5px',
-    }
-
     const filteredCoords = this.props.apiData.filter( bin => (Math.pow(bin.latitude, 2) * Math.pow(bin.longitude, 2)) > 1);
 
     return (
-      <div style={mapStyles}>
+      <div className="map">
         <h2>Public recycling bins near you:</h2>
         {this.state.located && <ReactMapGL
           mapStyle="mapbox://styles/eloisebarrow/cjzu271jb11xx1ck0q3wwz1je"
@@ -53,7 +43,6 @@ class NearYou extends React.Component {
           onViewportChange={this.setViewport}
            >
            {filteredCoords.map((d,i) => {
-             console.log('lat/long from Marker map', typeof d.latitude, typeof d.longitude)
              let lat = parseFloat(d.latitude);
              let lon = parseFloat(d.longitude);
              return (
@@ -65,7 +54,7 @@ class NearYou extends React.Component {
              )
            }) }
            <GeolocateControl
-           style={geoStyles}
+           className="geolocator"
            positionOptions={{enableHighAccuracy: true}}
            trackUserLocation={true} />
         </ReactMapGL> }

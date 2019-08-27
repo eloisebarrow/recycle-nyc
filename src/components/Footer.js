@@ -1,28 +1,14 @@
 import React from 'react'
+import '../App.css';
 
 const Footer = () => {
-  const footerStyles = {
-    backgroundColor: 'rgb(0,219,0)',
-    height: '60px',
-    display: 'flex',
-    justifyContent: 'center',
-    marginTop: '3%',
-  }
-
-  const linkStyles = {
-    alignSelf: 'center',
-    color: '#FFFFFF',
-    textDecoration: 'none',
-    fontSize: '1.4rem',
-  }
-
   const handleClick = () => {
     window.scrollTo(0,0);
   }
 
   return (
-    <footer style={footerStyles}>
-      <p id="p-footer" style={linkStyles} onClick={handleClick} >to top</p>
+    <footer className="footer-styles">
+      <p id="p-footer" onClick={handleClick}>to top</p>
     </footer>
   )
 }
