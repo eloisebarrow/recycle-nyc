@@ -83,6 +83,8 @@ The footer component will contain a simple copyright logo and a link to go to th
 | Style header | H | 1hr | 10mins | TBA |
 | Style main | M | 2hrs | TBA | TBA |
 | Style footer | M | 30mins | 15mins | TBA |
+| Style ByBorough component | M | 1hr | 2hrs | TBA |
+| Migrate inline styles to one style file | L | 1hr | 1hr | TBA |
 | Total |  | 25hrs |  |  |
 
 ## Additional Libraries
