@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const footerStyles = {
@@ -7,7 +6,7 @@ const Footer = () => {
     height: '60px',
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '50%',
+    marginTop: '3%',
   }
 
   const linkStyles = {
@@ -17,10 +16,13 @@ const Footer = () => {
     fontSize: '1.4rem',
   }
 
+  const handleClick = () => {
+    window.scrollTo(0,0);
+  }
+
   return (
     <footer style={footerStyles}>
-      <Link style={linkStyles} to="/">to top</Link>
-
+      <p id="p-footer" style={linkStyles} onClick={handleClick} >to top</p>
     </footer>
   )
 }

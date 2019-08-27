@@ -25,7 +25,7 @@ class Main extends React.Component {
 
   render() {
     const mainStyles = {
-      
+      flex: '1',
     }
     return (
       <div style={mainStyles}>

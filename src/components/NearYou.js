@@ -1,18 +1,18 @@
 import React from 'react'
-import ReactMapGL, { Marker } from 'react-map-gl'
+import ReactMapGL, { Marker, GeolocateControl } from 'react-map-gl'
 require('dotenv').config()
 
 class NearYou extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      mapStyle: 'mapbox://styles/mapbox/light-v9',
+      mapStyle: '',
       viewport: {
-        width: 400,
-        height: 400,
-        latitude: null,
-        longitude: null,
-        zoom: 14,
+        width: 700,
+        height: 700,
+        latitude: 40.7401135,
+        longitude: -73.98973769999999,
+        zoom: 12,
       },
       located: false,
       bins: [],
@@ -24,18 +24,9 @@ class NearYou extends React.Component {
   }
 
   componentDidMount() {
-    if (this.state.viewport.latitude === null) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.setState(prevState => ({
-          viewport: {
-            ...prevState.viewport,
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          },
-          located: true,
-        }))
-      });
-    }
+    this.setState({
+      located: true,
+    })
   }
 
   render() {
@@ -44,12 +35,19 @@ class NearYou extends React.Component {
       'flexDirection': 'column',
       'alignItems': 'center',
     }
+
+    const geoStyles = {
+      position: 'absolute',
+      margin: '5px',
+    }
+
     const filteredCoords = this.props.apiData.filter( bin => (Math.pow(bin.latitude, 2) * Math.pow(bin.longitude, 2)) > 1);
 
     return (
       <div style={mapStyles}>
         <h2>Public recycling bins near you:</h2>
         {this.state.located && <ReactMapGL
+          mapStyle="mapbox://styles/eloisebarrow/cjzu271jb11xx1ck0q3wwz1je"
           {...this.state.viewport}
           mapboxAccessToken={process.env.MapboxAccessToken}
           onViewportChange={this.setViewport}
@@ -66,6 +64,10 @@ class NearYou extends React.Component {
                </Marker>
              )
            }) }
+           <GeolocateControl
+           style={geoStyles}
+           positionOptions={{enableHighAccuracy: true}}
+           trackUserLocation={true} />
         </ReactMapGL> }
       </div>
     )
