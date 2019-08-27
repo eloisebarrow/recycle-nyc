@@ -79,7 +79,7 @@ The footer component will contain a simple copyright logo and a link to go to th
 | Research geolocation API data | H | 1hr | 1hr | TBA |
 | Pull data into 'near you' using geolocation API | H | 2hrs | 35mins | TBA |
 | Pseudocode logic for retrieving data from 'near you' | H | 2hrs | TBA | TBA |
-| Render data for 'near you' | H | 2hrs | 2hrs | TBA |
+| Render data for 'near you' | H | 2hrs | 3.5hrs | TBA |
 | Style header | H | 1hr | 10mins | TBA |
 | Style main | M | 2hrs | TBA | TBA |
 | Style footer | M | 30mins | 15mins | TBA |
@@ -125,6 +125,6 @@ function reverse(string) {
 
 -
 
-**ERROR**: When mapping through API data and trying to generate a marker for each data point, the markers are only generated with hard-coded data, I cannot generate them with my element parameter and get the following error: viewport-mercator-project: assertion failed
+**ERROR**: When mapping through API data in the NearYou component and trying to generate a marker for each data point, the markers can only be generated with hard-coded data - I cannot generate them with my element parameter. Getting the following error: viewport-mercator-project: assertion failed
 
-**RESOLUTION**: pending
+**RESOLUTION**: parseInt applied to the lat/long converted lat/long to integers when I needed floats (replaced with parseFloat); too many data points caused the app to crash (now mapping through a filtered version of data which decreases the radius of data points the map will render); added a boolean stateful variable 'located' which is now the first condition when I conditionally render the ReactMapGL component - 'located' will set to 'true' on componentDidMount & will prevent the ReactMapGL component from rendering as soon as it receives a latitude.

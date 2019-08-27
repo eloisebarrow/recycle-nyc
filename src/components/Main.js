@@ -24,17 +24,18 @@ class Main extends React.Component {
   }
 
   render() {
-
-
+    const mainStyles = {
+      
+    }
     return (
-      <div>
+      <div style={mainStyles}>
         <Switch>
           <Route path="/about" render={() => <About />}></Route>
           <Route path="/resources" render={() => <Resources />}></Route>
           <Route path="/by-borough" render={() => <ByBorough apiData={this.state.data}
           borough={'Staten Island'} />}></Route>
           <Route path="/near-you" render={() => <NearYou apiData={this.state.data} />}></Route>
-          <Route path="/"></Route>
+          <Route exact path="/"></Route>
         </Switch>
       </div>
     )

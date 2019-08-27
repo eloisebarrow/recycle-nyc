@@ -6,14 +6,15 @@ class NearYou extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      mapStyle: '',
+      mapStyle: 'mapbox://styles/mapbox/light-v9',
       viewport: {
         width: 400,
         height: 400,
         latitude: null,
         longitude: null,
-        zoom: 8
+        zoom: 14,
       },
+      located: false,
       bins: [],
     }
   }
@@ -30,7 +31,8 @@ class NearYou extends React.Component {
             ...prevState.viewport,
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
-          }
+          },
+          located: true,
         }))
       });
     }
@@ -42,25 +44,28 @@ class NearYou extends React.Component {
       'flexDirection': 'column',
       'alignItems': 'center',
     }
+    const filteredCoords = this.props.apiData.filter( bin => (Math.pow(bin.latitude, 2) * Math.pow(bin.longitude, 2)) > 1);
 
     return (
       <div style={mapStyles}>
         <h2>Public recycling bins near you:</h2>
-        {this.state.viewport.latitude && <ReactMapGL
-
+        {this.state.located && <ReactMapGL
           {...this.state.viewport}
           mapboxAccessToken={process.env.MapboxAccessToken}
           onViewportChange={this.setViewport}
            >
-           {this.props.apiData.map( (d,i) => {
-             return(
+           {filteredCoords.map((d,i) => {
+             console.log('lat/long from Marker map', typeof d.latitude, typeof d.longitude)
+             let lat = parseFloat(d.latitude);
+             let lon = parseFloat(d.longitude);
+             return (
                <Marker key={i}
-               latitude={40.517368}
-               longitude={-74.190913}
+               latitude={lat}
+               longitude={lon}
                >
                </Marker>
              )
-             }) }
+           }) }
         </ReactMapGL> }
       </div>
     )
