@@ -1,7 +1,6 @@
-import React from 'react'
-import '../App.css'
-import ReactMapGL, { Marker, GeolocateControl } from 'react-map-gl'
-require('dotenv').config()
+import React from 'react';
+import '../App.css';
+import ReactMapGL, { Marker, GeolocateControl } from 'react-map-gl';
 
 class NearYou extends React.Component {
   constructor(props) {

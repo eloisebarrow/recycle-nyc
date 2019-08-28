@@ -7,14 +7,25 @@ const ByBorough = (props) => {
   const boroughData = props.apiData
     .filter((d) => d.borough === borough)
     .map((d, i) => {
-      return (
-        <div
-        key={i}
-        className="borough-data-styles" >
-          <p className="borough-content">{d.borough} <br/><span className="borough-category">Location:</span> {d.park_site_name} <br/><span className="borough-category">Address:</span> {d.address}</p>
-        </div>
-      )
-  })
+      if (d.park_site_name !== d.address) {
+        return (
+          <div
+          key={i}
+          className="borough-data-styles">
+            <p className="borough-content">{d.park_site_name} <br/><span className="borough-category">@</span> {d.address}</p>
+          </div>
+        )
+      }
+        else if (d.park_site_name == d.address ) {
+          return (
+            <div
+            key={i}
+            className="borough-data-styles">
+              <p className="borough-content">{d.address}</p>
+            </div>
+          )
+        }
+      })
   return (
     <div>
       <h2>View recycling bins by borough</h2>

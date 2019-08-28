@@ -1,27 +1,10 @@
+/************** REACT STYLES **********/
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
+/*************** MAIN STYLES *************/
 
 html, body, #root {
   height: 100%;
@@ -37,11 +20,32 @@ html, body, #root {
   flex: 1 0 auto;
 }
 
-.header-styles {
+/**************** HEADER STYLES ***************/
+
+.header-styles, footer {
   background-color: rgb(0,219,0);
   color: #FFFFFF;
   padding: 1% 0;
+  font-family: 'Merriweather', serif;
 }
+
+.recycle-logo {
+  position: absolute;
+  left: 0;
+  margin-left: 1%;
+  width: 7%;
+}
+
+#title {
+  font-size: 3rem;
+}
+
+.headline {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+}
+
+/************* NAV STYLES ********************/
 
 .ul-styles{
   display: flex;
@@ -53,13 +57,21 @@ html, body, #root {
 .link-styles {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 2rem;
+  box-shadow: 1px 2px 4px rgba(0, 219, 0, 0.5);
 }
 
-.h3-styles {
-  font-style: italic;
+.hamburger {
+  opacity: 0%;
 }
 
+.link-styles:hover {
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(255, 255, 255, 0.3);
+}
+
+/**************** ABOUT STYLES ********************/
 .about {
   display: flex;
   justify-content: center;
@@ -72,6 +84,7 @@ html, body, #root {
   font-size: 1.3rem;
 }
 
+/**************** BY BOROUGH STYLES ********************/
 .borough-dropdown {
   margin: 1% 0;
   font-size: 0.9rem;
@@ -83,21 +96,28 @@ html, body, #root {
   justify-content: space-around;
 }
 
+/* BOX SHADOW EFFECTS FROM W3 SCHOOLS */
 .borough-data-styles {
   margin: 2%;
   width: 20%;
-  border: 1px solid black;
   border-radius: 2%;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.borough-data-styles:hover {
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 
 .borough-content {
   padding: 0 6%;
+  line-height: 1.5rem;
 }
 
-.borough-category {
-  font-weight: bold;
-}
-
+/************************* MAP STYLES ********************/
 .mapboxgl-marker {
   width: 15px;
   height: 15px;
@@ -117,8 +137,9 @@ html, body, #root {
   margin: 5px;
 }
 
+/*********************** FOOTER STYLES ***********************/
+
 .footer-styles {
-  background-color: rgb(0,219,0);
   height: 60px;
   display: flex;
   justify-content: center;
@@ -130,9 +151,36 @@ html, body, #root {
   align-self: center;
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 #p-footer:hover {
   cursor: pointer;
+}
+
+@media (max-width: 740px) {
+  .header-styles {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+  }
+
+.link-styles, .headline, .ul-styles, .recycle-logo {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hamburger {
+    width: 70px;
+    height: 70px;
+    border: 1px solid white;
+    border-radius: 10%;
+    margin: auto 0;
+  }
+
+  .hamburger-slice {
+    border-bottom: 5px solid white;
+  }
+
 }
