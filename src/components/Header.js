@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <header className='header-styles'>
-      <img src="https://res.cloudinary.com/eloise/image/upload/v1567019346/recycling_vd5cly.png" className="recycle-logo" alt="Recycle"/>
+      
       <h1 id="title">Recycle NYC</h1>
       <div className='hamburger'>
         <i class="fas fa-bars"></i>
