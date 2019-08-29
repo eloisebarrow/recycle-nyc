@@ -33,7 +33,7 @@ class NearYou extends React.Component {
     const filteredCoords = this.props.apiData.filter( bin => (Math.pow(bin.latitude, 2) * Math.pow(bin.longitude, 2)) > 1);
 
     return (
-      <div className="map">
+      <div className="map-container">
         <h2>Public recycling bins near you:</h2>
         {this.state.located && <ReactMapGL
           mapStyle="mapbox://styles/eloisebarrow/cjzu271jb11xx1ck0q3wwz1je"

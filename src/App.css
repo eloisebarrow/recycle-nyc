@@ -127,7 +127,7 @@ html, body, #root {
   background-color: lightblue;
 }
 
-.map {
+.map-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,10 +191,19 @@ html, body, #root {
     height: 100px;
     margin: 0;
     padding: 0;
+    transform: translate(100,0);
   }
 
   .link-styles {
     font-size: 1.25rem;
+  }
+
+  .borough-data-styles {
+    min-width: 200px;
+  }
+
+  .mapboxgl-map {
+    max-width: 700px;
   }
 
 }
