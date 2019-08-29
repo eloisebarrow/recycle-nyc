@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/eloisebarrow/recycle-nyc/static/css/main.fa39e953.chunk.css",
+    "main.js": "/eloisebarrow/recycle-nyc/static/js/main.741ccc0e.chunk.js",
+    "main.js.map": "/eloisebarrow/recycle-nyc/static/js/main.741ccc0e.chunk.js.map",
+    "runtime~main.js": "/eloisebarrow/recycle-nyc/static/js/runtime~main.d3e7a5b0.js",
+    "runtime~main.js.map": "/eloisebarrow/recycle-nyc/static/js/runtime~main.d3e7a5b0.js.map",
+    "static/js/2.4c39f5cc.chunk.js": "/eloisebarrow/recycle-nyc/static/js/2.4c39f5cc.chunk.js",
+    "static/js/2.4c39f5cc.chunk.js.map": "/eloisebarrow/recycle-nyc/static/js/2.4c39f5cc.chunk.js.map",
+    "index.html": "/eloisebarrow/recycle-nyc/index.html",
+    "precache-manifest.555f34aef9c956cf71a30374000b3fb1.js": "/eloisebarrow/recycle-nyc/precache-manifest.555f34aef9c956cf71a30374000b3fb1.js",
+    "service-worker.js": "/eloisebarrow/recycle-nyc/service-worker.js",
+    "static/css/main.fa39e953.chunk.css.map": "/eloisebarrow/recycle-nyc/static/css/main.fa39e953.chunk.css.map"
+  }
+}
