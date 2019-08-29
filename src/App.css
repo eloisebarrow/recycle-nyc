@@ -1,11 +1,8 @@
-/************** REACT STYLES **********/
-
 .App {
   text-align: center;
 }
 
 /*************** MAIN STYLES *************/
-
 html, body, #root {
   height: 100%;
 }
@@ -24,7 +21,7 @@ html, body, #root {
 
 .header-styles, footer {
   background-color: rgb(0,219,0);
-  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); /* GRADIENT FROM https://webgradients.com/ */
   color: #FFFFFF;
   padding: 1% 0;
   font-family: 'Merriweather', serif;
@@ -48,7 +45,6 @@ html, body, #root {
 }
 
 /************* NAV STYLES ********************/
-
 .ul-styles{
   display: flex;
   list-style: none;
@@ -60,8 +56,6 @@ html, body, #root {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 2rem;
-  /* box-shadow: 1px 2px 4px #d4fc79; */
-  /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
 }
 
 .hamburger {
@@ -90,7 +84,6 @@ html, body, #root {
 }
 
 /****************** RESOURCES STYLES ****************/
-
 .resources-list {
   padding: 0;
 }
@@ -180,6 +173,7 @@ html, body, #root {
     display: flex;
     justify-content: space-between;
     padding: 2%;
+    min-height: 150px;
   }
 
   .headline {
@@ -246,7 +240,4 @@ html, body, #root {
   .borough-data-styles {
     min-width: 200px;
   }
-
-
-
 }

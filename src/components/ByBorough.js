@@ -16,7 +16,7 @@ const ByBorough = (props) => {
           </div>
         )
       }
-        else if (d.park_site_name == d.address ) {
+        else if (d.park_site_name === d.address ) {
           return (
             <div
             key={i}
