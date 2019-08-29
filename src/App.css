@@ -166,14 +166,16 @@ html, body, #root {
     padding: 2%;
   }
 
-  /*.link-styles, .headline, .ul-styles,*/ .headline, .recycle-logo {
+  .headline {
     display: none;
     margin: 0;
     padding: 0;
   }
 
   .hamburger {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 70px;
     height: 70px;
     border: 1px solid white;
@@ -182,16 +184,43 @@ html, body, #root {
   }
 
   .hamburger-slice {
-    border-bottom: 5px solid white;
+    border-bottom: 3px solid #FFFFFF;
+    width: 90%;
+    margin-bottom: 3px;
+    align-self: center;
+    border-radius: 50%;
   }
 
-  .ul-styles {
-    display: flex;
+  .hamburger-slice:last-child {
+    margin-bottom: 0;
+  }
+
+  .sidebar {
+    display: none;
     flex-direction: column;
-    height: 100px;
+    /* height: 100px; */
     margin: 0;
     padding: 0;
-    transform: translate(100,0);
+    transform: translateX(120%);
+    transition: all .2s ease-in-out 0s;
+  }
+
+  .sidebar-active {
+    transform: translateX(0%);
+    transition: all .2s ease-in-out 0s;
+    display: flex;
+  }
+
+  .hideburger {
+    display: none;
+  }
+
+  li {
+    margin-bottom: 13px;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
   }
 
   .link-styles {
