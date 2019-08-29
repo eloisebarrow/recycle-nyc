@@ -8,8 +8,8 @@ class NearYou extends React.Component {
     this.state = {
       mapStyle: '',
       viewport: {
-        width: 700,
-        height: 700,
+        width: '80%',
+        height: '80vh',
         latitude: 40.7401135,
         longitude: -73.98973769999999,
         zoom: 12,
