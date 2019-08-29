@@ -173,7 +173,7 @@ html, body, #root {
     display: flex;
     justify-content: space-between;
     padding: 2%;
-    min-height: 150px;
+    /* min-height: 200px; */
   }
 
   .headline {
@@ -218,7 +218,7 @@ html, body, #root {
     transform: translateX(0%);
     transition: all .2s ease-in-out 0s;
     display: flex;
-    height: 200px;
+    min-height: 250px;
   }
 
   .hideburger {
