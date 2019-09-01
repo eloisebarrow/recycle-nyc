@@ -117,16 +117,16 @@ const boroughData = props.apiData
 ## Issues and Resolutions
 
 **ERROR**: I can't return individual borough data in the ByBorough component - tried looping through using .filter and .forEach, neither updated the DOM. Also tried looping through all data in Main's async function and distributing borough data to state but that only returned 1 object each time instead of all borough data.
-**RESOLUTION**: My code in .forEach was correct but despite including a return statement forEach will not return any data. I changed it to a .filter method to filter by borough and then mapped through the .filter to return a list of all bins in a given borough.
+<br/>**RESOLUTION**: My code in .forEach was correct but despite including a return statement forEach will not return any data. I changed it to a .filter method to filter by borough and then mapped through the .filter to return a list of all bins in a given borough.
 
 **ERROR**: I can't get my mapbox to render in the NearYou component.
-**RESOLUTION**: My MapboxAccessToken environment variable in my .env file needed REACT_APP_ in front of it & I had to restart my react server.
+<br/>**RESOLUTION**: My MapboxAccessToken environment variable in my .env file needed REACT_APP_ in front of it & I had to restart my react server.
 
 **ERROR**: Map would not render when passing it user location info via userLat and userLong in state.
-**RESOLUTION**: I had to update the viewport lat/long directly and conditionally render the map so it would only render once it received lat/long coordinates (due to the geolocator taking longer to return data than the map initially took to render).
+<br/>**RESOLUTION**: I had to update the viewport lat/long directly and conditionally render the map so it would only render once it received lat/long coordinates (due to the geolocator taking longer to return data than the map initially took to render).
 
 **ERROR**: Map marker would not render on mapbox.
-**RESOLUTION**: It was physically there but had no styles so I added those.
+<br/>**RESOLUTION**: It was physically there but had no styles so I added those.
 
 **ERROR**: When mapping through API data in the NearYou component and trying to generate a marker for each data point, the markers can only be generated with hard-coded data - I cannot generate them with my element parameter. Getting the following error: viewport-mercator-project: assertion failed
-**RESOLUTION**: parseInt applied to the lat/long had converted lat/long to integers when I needed floats (replaced with parseFloat); too many data points caused the app to crash (now mapping through a filtered version of data which decreases the radius of data points the map will render); added a boolean stateful variable 'located' which is now the first condition when I conditionally render the ReactMapGL component - 'located' will set to 'true' on componentDidMount & will prevent the ReactMapGL component from rendering as soon as it receives a latitude.
+<br/>**RESOLUTION**: parseInt applied to the lat/long had converted lat/long to integers when I needed floats (replaced with parseFloat); too many data points caused the app to crash (now mapping through a filtered version of data which decreases the radius of data points the map will render); added a boolean stateful variable 'located' which is now the first condition when I conditionally render the ReactMapGL component - 'located' will set to 'true' on componentDidMount & will prevent the ReactMapGL component from rendering as soon as it receives a latitude.
