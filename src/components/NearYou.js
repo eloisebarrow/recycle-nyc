@@ -15,7 +15,6 @@ class NearYou extends React.Component {
         zoom: 12,
       },
       located: false,
-      bins: [],
     }
   }
 

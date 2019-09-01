@@ -9,18 +9,13 @@ const ByBorough = (props) => {
     .map((d, i) => {
       if (d.park_site_name !== d.address) {
         return (
-          <div
-          key={i}
-          className="borough-data-styles">
+          <div key={i} className="borough-data-styles">
             <p className="borough-content">{d.park_site_name} <br/><span className="borough-category">@</span> {d.address}</p>
           </div>
         )
-      }
-        else if (d.park_site_name === d.address ) {
+      } else if (d.park_site_name === d.address ) {
           return (
-            <div
-            key={i}
-            className="borough-data-styles">
+            <div key={i} className="borough-data-styles">
               <p className="borough-content">{d.address}</p>
             </div>
           )
