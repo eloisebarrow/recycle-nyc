@@ -1,8 +1,9 @@
 # Project Overview
 
 ## Project Links
-Github repo: https://github.com/eloisebarrow/recycle-nyc
-Deployment: https://recycle-nyc.surge.sh/
+[Github repo](https://github.com/eloisebarrow/recycle-nyc)
+<br>[View deployed site](https://recycle-nyc.surge.sh/)
+<br>[Read about my process](https://medium.com/@eloiseressbarrow/newb-techie-saves-the-earth-with-nyc-recycling-app-b94e8143800b)
 
 ## Project Description
 
