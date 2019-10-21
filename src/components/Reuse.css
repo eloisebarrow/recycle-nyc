@@ -10,6 +10,6 @@
   height: 300px;
 }
 
-.reuse-content {
-  text-align: left;
+.reuse-img, .reuse-content {
+  width: 50%;
 }

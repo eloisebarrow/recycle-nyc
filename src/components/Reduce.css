@@ -9,6 +9,6 @@
   height: 250px;
 }
 
-.reduce-content {
-  text-align: left;
+.reduce-img, .reduce-content {
+  width: 50%;
 }

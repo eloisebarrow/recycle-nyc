@@ -1,13 +1,10 @@
 import React from 'react';
 import '../App.css';
 import axios from 'axios';
-import About from './About';
 import ByBorough from './ByBorough';
 import NearYou from './NearYou';
-import Resources from './Resources';
-import Reduce from './Reduce';
-import Reuse from './Reuse';
-import Recycle from './Recycle';
+import Home from './Home';
+
 import { Route, Switch } from 'react-router-dom';
 
 class Main extends React.Component {
@@ -30,17 +27,11 @@ class Main extends React.Component {
   render() {
     return (
       <div className="main-div-styles">
-        <Reduce />
-        <Reuse />
-        <Recycle />
-
         <Switch>
-          {/* <Route path="/about" render={() => <About />}></Route> */}
-          <Route path="/resources" render={() => <Resources />}></Route>
           <Route path="/by-borough" render={() => <ByBorough apiData={this.state.data}
           borough={'Staten Island'} />}></Route>
           <Route path="/near-you" render={() => <NearYou apiData={this.state.data} />}></Route>
-          <Route exact path="/"></Route>
+          <Route exact path="/" render={() => <Home />}></Route>
         </Switch>
       </div>
     )

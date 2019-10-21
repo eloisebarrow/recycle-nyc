@@ -17,60 +17,13 @@ html, body, #root {
   flex: 1 0 auto;
 }
 
-/**************** HEADER STYLES ***************/
-
-
-.header-styles, footer {
-  background-color: rgb(0,123,77);
-  color: #FFFFFF;
-  padding: 1% 0;
-}
-
-#title {
-  font-family: 'Rajdhani', sans-serif;
-}
-
-.link-styles, .footer-styles, .headline {
-  font-family: 'Roboto', sans-serif;
-}
-
-#title {
-  font-size: 3rem;
-}
-
-.headline {
-  font-size: 1.25rem;
-}
-
-/************* NAV STYLES ********************/
-.ul-styles{
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  margin: 3% 10%;
-}
-
-.link-styles {
-  color: #FFFFFF;
+a {
   text-decoration: none;
-  font-size: 2rem;
+  cursor: pointer;
 }
-
-.hamburger {
-  opacity: 0%;
-}
-
-.link-styles:hover {
-  text-decoration: underline;
-}
-
-.close {
-  display: none;
-}
-
 
 /**************** ABOUT STYLES ********************/
-.about {
+/* .about {
   display: flex;
   justify-content: center;
 }
@@ -80,7 +33,7 @@ html, body, #root {
   line-height: 1.9rem;
   font-size: 1.1rem;
   padding-top: 5%;
-}
+} */
 
 /****************** RESOURCES STYLES ****************/
 .resources-list {
@@ -152,7 +105,7 @@ html, body, #root {
   height: 60px;
   display: flex;
   justify-content: center;
-  margin-top: 3%;
+  /* margin-top: 3%; */
   flex-shrink: 0;
 }
 
@@ -167,63 +120,7 @@ html, body, #root {
   cursor: pointer;
 }
 
-@media (max-width: 740px) {
-  .header-styles {
-    display: flex;
-    justify-content: space-between;
-    padding: 2%;
-    /* min-height: 200px; */
-  }
-
-  .headline {
-    display: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 70px;
-    height: 70px;
-    border: 1px solid white;
-    border-radius: 10%;
-    margin: auto 0;
-  }
-
-  .hamburger-slice {
-    border-bottom: 3px solid #FFFFFF;
-    width: 90%;
-    margin-bottom: 3px;
-    align-self: center;
-    border-radius: 50%;
-  }
-
-  .hamburger-slice:last-child {
-    margin-bottom: 0;
-  }
-
-  .sidebar {
-    display: none;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    transform: translateX(120%);
-    transition: all .2s ease-in-out 0s;
-  }
-
-  .sidebar-active {
-    transform: translateX(0%);
-    transition: all .2s ease-in-out 0s;
-    display: flex;
-    min-height: 250px;
-  }
-
-  .hideburger {
-    display: none;
-  }
-
+@media screen and (max-width: 740px) {
   li {
     margin-bottom: 13px;
   }

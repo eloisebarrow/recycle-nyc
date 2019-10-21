@@ -1,5 +1,5 @@
-import React from 'react'
-import '../App.css'
+import React from 'react';
+import '../App.css';
 
 const ByBorough = (props) => {
   const [borough, setBorough] = React.useState(null);

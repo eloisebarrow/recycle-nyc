@@ -9,6 +9,6 @@
   height: 300px;
 }
 
-.recycle-content {
-  text-align: left;
+.recycle-img, .recycle-content {
+  width: 50%;
 }
