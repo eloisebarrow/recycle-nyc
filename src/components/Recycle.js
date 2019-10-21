@@ -10,7 +10,7 @@ export default function Recycle() {
 
       <div className="recycle-content">
         <h2>Recycle</h2>
-        <li className="resurces-list-item"><a href="https://www.terracycle.com/en-US" target="_blank" rel="noopener noreferrer" alt="Terracycle">Terracycle</a> - Learn how to recycle hard-to-recycle items + larger-scale recycling.</li>
+        <p><a href="https://www.terracycle.com/en-US" target="_blank" rel="noopener noreferrer" alt="Terracycle">Terracycle</a> - Learn how to recycle hard-to-recycle items + larger-scale recycling.</p>
       </div>
       
     </div>

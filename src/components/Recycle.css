@@ -13,10 +13,19 @@
 }
 
 @media screen and (min-width: 700px) {
+  .recycle-container {
+    height: 400px;
+  }
+
   .recycle-img {
     background-image: url('./../images/recycle-desktop.jpg');
     background-size: cover;
-    width: 300px;
-    height: 300px;
+    width: 411px;
+    height: 100%;
+  }
+
+  .recycle-content {
+    text-align: left;
+    padding-left: 3%;
   }
 }

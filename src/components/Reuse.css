@@ -14,10 +14,19 @@
 }
 
 @media screen and (min-width: 700px) {
+  .reuse-container {
+    height: 400px;
+  }
+
   .reuse-img {
-    background-image: url('./../images/reuse-desktop.jpg');
+    background-image: url('./../images/reuse-dektop.jpeg');
     background-size: cover;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 100%;
+  }
+
+  .reuse-content {
+    width: 34%;
+    text-align: left;
   }
 }
