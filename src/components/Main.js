@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
 import '../App.css';
-import { Route, Switch } from 'react-router-dom'
-import axios from 'axios'
-import About from './About'
-import ByBorough from './ByBorough'
-import NearYou from './NearYou'
-import Resources from './Resources'
+import axios from 'axios';
+import About from './About';
+import ByBorough from './ByBorough';
+import NearYou from './NearYou';
+import Resources from './Resources';
+import Reduce from './Reduce';
+import Reuse from './Reuse';
+import Recycle from './Recycle';
+import { Route, Switch } from 'react-router-dom';
 
 class Main extends React.Component {
   state = {
@@ -27,8 +30,12 @@ class Main extends React.Component {
   render() {
     return (
       <div className="main-div-styles">
+        <Reduce />
+        <Reuse />
+        <Recycle />
+
         <Switch>
-          <Route path="/about" render={() => <About />}></Route>
+          {/* <Route path="/about" render={() => <About />}></Route> */}
           <Route path="/resources" render={() => <Resources />}></Route>
           <Route path="/by-borough" render={() => <ByBorough apiData={this.state.data}
           borough={'Staten Island'} />}></Route>
@@ -40,4 +47,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main
+export default Main;

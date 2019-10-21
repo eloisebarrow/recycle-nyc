@@ -19,25 +19,19 @@ html, body, #root {
 
 /**************** HEADER STYLES ***************/
 
-.header-styles {
-  background-image: url('./images/recycling-bins.jpg');
-  background-size: cover;
-}
 
 .header-styles, footer {
-  /* background-color: rgb(0,219,0);
-  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); GRADIENT FROM https://webgradients.com/ */
+  background-color: rgb(0,123,77);
   color: #FFFFFF;
   padding: 1% 0;
-  font-family: 'Merriweather', serif;
 }
 
-.recycle-logo {
-  position: absolute;
-  left: 0;
-  margin-left: 1%;
-  width: 7%;
-  opacity: 0.8;
+#title {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.link-styles, .footer-styles, .headline {
+  font-family: 'Roboto', sans-serif;
 }
 
 #title {
@@ -45,7 +39,6 @@ html, body, #root {
 }
 
 .headline {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.25rem;
 }
 

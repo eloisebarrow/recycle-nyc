@@ -1,0 +1,14 @@
+.recycle-container {
+  display: flex;
+}
+
+.recycle-img {
+  background-image: url('./../images/recycle.jpg');
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.recycle-content {
+  text-align: left;
+}

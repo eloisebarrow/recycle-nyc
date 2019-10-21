@@ -19,8 +19,8 @@ const Header = () => {
       </div>
       <ul className={`ul-styles sidebar ${sidebarVisible ? 'sidebar-active' : ''}`}>
         <li><Link onClick={() => setSidebarVisible(false)} className='link-styles' to="/">home</Link></li>
-        <li><Link onClick={() => setSidebarVisible(false)} className='link-styles' to="/about">about</Link></li>
-        <li><Link onClick={() => setSidebarVisible(false)} className='link-styles' to="/resources">resources</Link></li>
+        {/* <li><Link onClick={() => setSidebarVisible(false)} className='link-styles' to="/about">about</Link></li> */}
+        {/* <li><Link onClick={() => setSidebarVisible(false)} className='link-styles' to="/resources">resources</Link></li> */}
         <li><Link onClick={() => setSidebarVisible(false)} className='link-styles' to="/by-borough">by borough</Link></li>
         <li><Link onClick={() => setSidebarVisible(false)} className='link-styles' to="/near-you">near you</Link></li>
       </ul>

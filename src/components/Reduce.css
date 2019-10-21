@@ -1,0 +1,14 @@
+.reduce-container {
+  display: flex;
+}
+
+.reduce-img {
+  background-image: url('./../images/reduce.jpg');
+  background-size: cover;
+  width: 300px;
+  height: 250px;
+}
+
+.reduce-content {
+  text-align: left;
+}
