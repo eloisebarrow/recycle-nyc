@@ -1,0 +1,22 @@
+.map-container {
+  margin-bottom: 3%;
+}
+
+.mapboxgl-marker {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background-color: lightblue;
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.geolocator {
+  position: absolute;
+  margin: 5px;
+}

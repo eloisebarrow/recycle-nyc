@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import ReactMapGL, { Marker, GeolocateControl } from 'react-map-gl';
+import './NearYou.css';
 
 class NearYou extends React.Component {
   constructor(props) {

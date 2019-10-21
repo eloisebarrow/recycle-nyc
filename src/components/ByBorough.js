@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import './ByBorough.css';
 
 const ByBorough = (props) => {
   const [borough, setBorough] = React.useState(null);
