@@ -10,7 +10,7 @@ export default function Reduce() {
 
       <div className="reduce-content">
         <h2>Reduce</h2>
-        <li className="resurces-list-item"><a href="https://zerowastehome.com/tips/" target="_blank" rel="noopener noreferrer" alt="100 Tips for Zero Waste">Zero Waste Home's 100 Tips for Zero Waste</a></li>
+        <p className="reduce-paragraph"><a href="https://zerowastehome.com/tips/" target="_blank" rel="noopener noreferrer" alt="100 Tips for Zero Waste">Zero Waste Home's 100 Tips for Zero Waste</a></p>
       </div>
 
     </div>

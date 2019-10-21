@@ -3,12 +3,28 @@
 }
 
 .reduce-img {
-  background-image: url('./../images/reduce.jpg');
+  background-image: url('./../images/reduce-mobile.jpeg');
   background-size: cover;
-  width: 300px;
-  height: 250px;
+  height: 253px;
 }
 
 .reduce-img, .reduce-content {
   width: 50%;
+}
+
+@media screen and (min-width: 700px) {
+  .reduce-container {
+    height: 323px;
+  }
+  .reduce-img {
+    background-image: url('./../images/reduce-desktop.jpg');
+    background-size: cover;
+    width: 411px;
+    height: 100%;
+  }
+
+  .reduce-content {
+    text-align: left;
+    padding-left: 3%;
+  }
 }

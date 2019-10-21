@@ -3,12 +3,20 @@
 }
 
 .recycle-img {
-  background-image: url('./../images/recycle.jpg');
+  background-image: url('./../images/recycle-mobile.jpeg');
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  height: 233px;
 }
 
 .recycle-img, .recycle-content {
   width: 50%;
+}
+
+@media screen and (min-width: 700px) {
+  .recycle-img {
+    background-image: url('./../images/recycle-desktop.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
 }

@@ -18,7 +18,7 @@
 
 .headline {
   font-size: 1.25rem;
-  margin-bottom: 6%;
+  margin: 3% 6% 6% 6%;
 }
 
 .link-styles, .footer-styles, .headline {
@@ -43,3 +43,10 @@
 .link-styles:hover {
   text-decoration: underline;
 }
+
+@media screen and (min-width: 700px) {
+  .ul-styles {
+    justify-content: space-around;
+  }
+}
+
