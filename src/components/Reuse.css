@@ -4,7 +4,7 @@
 }
 
 .reuse-img {
-  background-image: url('./../images/reuse-mobile.jpeg');
+  background-image: url('https://res.cloudinary.com/eloise/image/upload/v1571689958/sei_project_2/reuse-mobile.jpg');
   background-size: cover;
   height: 250px;
 }
@@ -19,7 +19,7 @@
   }
 
   .reuse-img {
-    background-image: url('./../images/reuse-dektop.jpeg');
+    background-image: url('https://res.cloudinary.com/eloise/image/upload/v1571689971/sei_project_2/reuse-dektop.jpg');
     background-size: cover;
     width: 400px;
     height: 100%;

@@ -3,7 +3,7 @@
 }
 
 .recycle-img {
-  background-image: url('./../images/recycle-mobile.jpeg');
+  background-image: url('https://res.cloudinary.com/eloise/image/upload/v1571689966/sei_project_2/recycle-mobile.jpg');
   background-size: cover;
   height: 233px;
 }
@@ -18,7 +18,7 @@
   }
 
   .recycle-img {
-    background-image: url('./../images/recycle-desktop.jpg');
+    background-image: url('https://res.cloudinary.com/eloise/image/upload/v1571689970/sei_project_2/recycle-desktop.jpg');
     background-size: cover;
     width: 411px;
     height: 100%;

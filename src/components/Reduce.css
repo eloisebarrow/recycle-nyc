@@ -3,7 +3,7 @@
 }
 
 .reduce-img {
-  background-image: url('./../images/reduce-mobile.jpeg');
+  background-image: url('https://res.cloudinary.com/eloise/image/upload/v1571689965/sei_project_2/reduce-mobile.jpg');
   background-size: cover;
   height: 253px;
 }
@@ -17,7 +17,7 @@
     height: 323px;
   }
   .reduce-img {
-    background-image: url('./../images/reduce-desktop.jpg');
+    background-image: url('https://res.cloudinary.com/eloise/image/upload/v1571689957/sei_project_2/reduce-desktop.jpg');
     background-size: cover;
     width: 411px;
     height: 100%;
