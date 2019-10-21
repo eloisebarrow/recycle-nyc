@@ -1,4 +1,27 @@
-/**************** BY BOROUGH STYLES ********************/
+.borough-container {
+  height: 100%;
+}
+
+/* .borough-container-show-img {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 575px;
+}
+
+.borough-img {
+  background-image: url('./../images/nyc.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.borough-content {
+  position: absolute;
+  color: #FFFFFF;
+} */
+
 .borough-dropdown {
   margin: 1% 0;
   font-size: 0.9rem;
@@ -34,4 +57,23 @@
 
 .borough-data-styles {
   min-width: 200px;
+}
+
+@media screen and (min-width: 700px) {
+  .borough-container {
+    height: 100%;
+  }
+  
+  .borough-container-show-img {
+    display: flex;
+    width: 100%;
+    height: 575px;
+  }
+  
+  .borough-img {
+    background-image: url('./../images/nyc.jpg');
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+  }
 }

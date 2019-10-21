@@ -11,7 +11,8 @@ const ByBorough = (props) => {
       if (d.park_site_name !== d.address) {
         return (
           <div key={i} className="borough-data-styles">
-            <p className="borough-content">{d.park_site_name} <br/><span className="borough-category">@</span> {d.address}</p>
+            <p className="borough-content">{d.park_site_name} 
+            <br/><span className="borough-category">@</span> {d.address}</p>
           </div>
         )
       } else if (d.park_site_name === d.address ) {
@@ -22,21 +23,29 @@ const ByBorough = (props) => {
           )
         }
       })
-  return (
-    <div>
-      <h2>View recycling bins by borough</h2>
-      <select className="borough-dropdown" onChange={(e) => setBorough(e.target.value)} name="boroughs" id="boroughs">
-        <option value="null">Choose Your Borough</option>
-        <option value="Bronx">Bronx</option>
-        <option value="Brooklyn">Brooklyn</option>
-        <option value="Manhattan">Manhattan</option>
-        <option value="Queens">Queens</option>
-        <option value="Staten Island">Staten Island</option>
-      </select>
 
-      <div className="boroughs-main">
-        {boroughData}
+  return (
+    <div className={ borough === null ? "borough-container-show-img" : "borough-container" }>
+      <div className={ borough === null ? "borough-img" : '' }>
+
       </div>
+
+      <div className="borough-content">
+        <h2>View recycling bins by borough</h2>
+          <select className="borough-dropdown" onChange={(e) => setBorough(e.target.value)} name="boroughs" id="boroughs">
+            <option value="null">Choose Your Borough</option>
+            <option value="Bronx">Bronx</option>
+            <option value="Brooklyn">Brooklyn</option>
+            <option value="Manhattan">Manhattan</option>
+            <option value="Queens">Queens</option>
+            <option value="Staten Island">Staten Island</option>
+          </select>
+
+          <div className="boroughs-main">
+            {boroughData}
+          </div>
+      </div>
+        
     </div>
   )
 }

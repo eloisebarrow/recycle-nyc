@@ -28,10 +28,23 @@ class Main extends React.Component {
     return (
       <div className="main-div-styles">
         <Switch>
-          <Route path="/by-borough" render={() => <ByBorough apiData={this.state.data}
-          borough={'Staten Island'} />}></Route>
-          <Route path="/near-you" render={() => <NearYou apiData={this.state.data} />}></Route>
-          <Route exact path="/" render={() => <Home />}></Route>
+          <Route 
+            path="/by-borough" 
+            render={() => 
+              <ByBorough 
+                apiData={this.state.data} />}>
+          </Route>
+          <Route 
+            path="/near-you" 
+            render={() => 
+              <NearYou 
+                apiData={this.state.data} />}>
+          </Route>
+          <Route 
+            exact path="/" 
+            render={() => 
+              <Home />}>
+          </Route>
         </Switch>
       </div>
     )
