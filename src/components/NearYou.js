@@ -34,7 +34,7 @@ class NearYou extends React.Component {
 
     return (
       <div className="map-container">
-        <h2>Public recycling bins near you:</h2>
+        <h2>Geolocate yourself to find a nearby bin</h2>
         {this.state.located && <ReactMapGL
           mapStyle="mapbox://styles/eloisebarrow/cjzu271jb11xx1ck0q3wwz1je"
           {...this.state.viewport}

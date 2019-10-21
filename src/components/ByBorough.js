@@ -31,8 +31,7 @@ const ByBorough = (props) => {
       </div>
 
       <div className="borough-content">
-        <h2>View recycling bins by borough</h2>
-          <select className="borough-dropdown" onChange={(e) => setBorough(e.target.value)} name="boroughs" id="boroughs">
+        <select className="borough-dropdown" onChange={(e) => setBorough(e.target.value)} name="boroughs" id="boroughs">
             <option value="null">Choose Your Borough</option>
             <option value="Bronx">Bronx</option>
             <option value="Brooklyn">Brooklyn</option>
@@ -40,7 +39,7 @@ const ByBorough = (props) => {
             <option value="Queens">Queens</option>
             <option value="Staten Island">Staten Island</option>
           </select>
-
+  
           <div className="boroughs-main">
             {boroughData}
           </div>
