@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-/*************** MAIN STYLES *************/
 html, body, #root {
   height: 100%;
 }
@@ -20,46 +19,4 @@ html, body, #root {
 a {
   text-decoration: none;
   cursor: pointer;
-}
-
-/**************** ABOUT STYLES ********************/
-/* .about {
-  display: flex;
-  justify-content: center;
-}
-
-.about-content {
-  width: 50%;
-  line-height: 1.9rem;
-  font-size: 1.1rem;
-  padding-top: 5%;
-} */
-
-/****************** RESOURCES STYLES ****************/
-.resources-list {
-  padding: 0;
-}
-
-.resurces-list-item {
-  list-style: none;
-  margin: 2%;
-  font-size: 1.1rem;
-}
-
-@media screen and (max-width: 740px) {
-  li {
-    margin-bottom: 13px;
-  }
-
-  li:last-child {
-    margin-bottom: 0;
-  }
-
-  .link-styles {
-    font-size: 1.25rem;
-  }
-
-  .borough-data-styles {
-    min-width: 200px;
-  }
 }
